@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-      app: vprodb
+        app: vprodb
     spec:
       containers:
         - name: vprodb
@@ -36,7 +36,7 @@ spec:
           awsElasticBlockStore:
             volumeID: vol-0e35db5da69e72917
             fsType: ext4
-#Removed lost and found file so Mysql can start without any issues
+      #Removed lost and found file so Mysql can start without any issues
       initContainers:
         - name: busybox
           image: busybox:latest
